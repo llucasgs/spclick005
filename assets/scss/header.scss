@@ -6,6 +6,8 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 2px solid #ccc;
+    position: fixed;
+    z-index: 3;
     .header-content {
       margin: 0 25px;
       display: flex;
@@ -19,5 +21,34 @@ body {
         fill: #fff;
       }
     }
+    .menu-links {
+      position: fixed;
+      width: 300px;
+      top: 0;
+      right: -300px;
+      height: 100%;
+      background-color: #cacad2;
+      > a {
+        margin: 15px;
+        width: 48px;
+        height: 48px;
+        float: right;
+      }
+      ul {
+        margin: 150px 0;
+        text-align: center;
+        padding: 0;
+        font-size: 18px;
+        li + li {
+          margin-top: 40px;
+        }
+      }
+    }
   }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1200px) {
 }
