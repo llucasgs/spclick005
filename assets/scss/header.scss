@@ -7,6 +7,7 @@ body {
     align-items: center;
     border-bottom: 2px solid #ccc;
     position: fixed;
+    top: 0;
     z-index: 3;
     .header-content {
       margin: 0 25px;
@@ -28,6 +29,7 @@ body {
       right: -300px;
       height: 100%;
       background-color: #cacad2;
+      transition: all ease-in 0.5s;
       > a {
         margin: 15px;
         width: 48px;
@@ -41,7 +43,15 @@ body {
         font-size: 18px;
         li + li {
           margin-top: 40px;
+          a {
+            color: #000;
+          }
         }
+      }
+    }
+    &.menu-open {
+      .menu-links {
+        right: 0;
       }
     }
   }

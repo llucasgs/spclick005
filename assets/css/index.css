@@ -49,9 +49,11 @@ body .custom-hr {
 body a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 body ul {
   padding: 0;
+  margin: 0;
 }
 body ul li {
   list-style: none;
@@ -70,6 +72,7 @@ body header {
   align-items: center;
   border-bottom: 2px solid #ccc;
   position: fixed;
+  top: 0;
   z-index: 3;
 }
 body header .header-content {
@@ -92,6 +95,7 @@ body header .menu-links {
   right: -300px;
   height: 100%;
   background-color: #cacad2;
+  transition: all ease-in 0.5s;
 }
 body header .menu-links > a {
   margin: 15px;
@@ -108,6 +112,12 @@ body header .menu-links ul {
 body header .menu-links ul li + li {
   margin-top: 40px;
 }
+body header .menu-links ul li + li a {
+  color: #000;
+}
+body header.menu-open .menu-links {
+  right: 0;
+}
 
 @media (min-width: 1200px) {
   body header .header-content .nav-desktop ul {
@@ -118,38 +128,39 @@ body header .menu-links ul li + li {
     margin-left: 20px;
   }
 }
-body section.hero {
+body section#hero {
   background-image: url("/assets/images/beco-do-batman.webp");
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
 }
-body section.hero::before {
+body section#hero::before {
   width: 100%;
   height: 100%;
   position: absolute;
   content: "";
+  color: #FFF;
   background-image: linear-gradient(#161618, rgba(22, 22, 24, 0.5647058824));
 }
-body section.hero .destak {
+body section#hero .destak {
   height: calc(100vh - 100px);
   position: absolute;
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   width: 100%;
 }
-body section.hero .destak .title {
+body section#hero .destak .title {
   margin-top: 100px;
   text-align: center;
 }
-body section.hero .destak .title h1 {
+body section#hero .destak .title h1 {
   font-size: 40px;
   font-weight: bold;
   color: #fff;
 }
-body section.hero .destak .title h2 {
+body section#hero .destak .title h2 {
   font-size: 20px;
   color: #fff;
   font-weight: lighter;
