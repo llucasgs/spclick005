@@ -47,8 +47,21 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-}
 
 @media (min-width: 1200px) {
+  body {
+    header {
+      .header-content {
+        .nav-desktop {
+          ul {
+            display: flex;
+            li {
+              min-width: 100px;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
