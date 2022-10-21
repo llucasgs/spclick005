@@ -30,13 +30,14 @@ main {
             }*/
         }
         .vacation-text {
-            padding: 0 20px;
             h2 {
-                font-size: 1.6em;
                 margin-top: 50px;
+                font-size: 1.3em;
             }
             p {
                 padding-top: 20px;
+                font-size: 1em;
+                font-weight: 300;
             }
         }
     }
@@ -57,7 +58,6 @@ main {
             .vacation-text {
                 padding: 0 0 0 20px;
                 h2 {
-                    font-size: 2.1em;
                     margin-top: unset;
                 }
             }
@@ -97,6 +97,8 @@ main {
             .vacation-text {
                 h2 {
                     max-width: 550px;
+                    font-size: 2.5em;
+                    text-align: start;
                 }
                 p {
                     max-width: 500px;
