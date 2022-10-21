@@ -2,11 +2,12 @@ body {
   header {
     height: 100px;
     width: 100%;
+    position: fixed;
+    top: 0;
     background-color: #161618;
     display: flex;
     align-items: center;
     border-bottom: 2px solid #ccc;
-    position: fixed;
     z-index: 3;
     .header-content {
       margin: 0 25px;
@@ -14,6 +15,29 @@ body {
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      .search {
+        position: relative;
+        input {
+          width: 500px;
+          height: 40px;
+          background-color: #ffffff30;
+          border-radius: 20px;
+          color: #fff;
+          outline: 0;
+          border: none;
+          padding: 0 50px;
+          &::placeholder {
+            color: #fff;
+            font-size: 1.1em;
+          }
+        }
+        img {
+          position: absolute;
+          top: 10px;
+          left: 15px;
+          width: 20px;
+        }
+      }
       img {
         width: 65px;
       }
@@ -28,6 +52,7 @@ body {
       right: -300px;
       height: 100%;
       background-color: #cacad2;
+      transition: all ease-in 0.5s;
       > a {
         margin: 15px;
         width: 48px;
@@ -41,14 +66,72 @@ body {
         font-size: 18px;
         li + li {
           margin-top: 40px;
+          a {
+            color: #000;
+          }
+        }
+        li {
+          a {
+            color: #000;
+          }
+        }
+      }
+    }
+    &.menu-open {
+      .menu-links {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    header {
+      .header-content {
+        .search {
+          input {
+            width: 300px;
+          }
+        }
+        .nav-desktop {
+          ul {
+            display: flex;
+            li {
+              min-width: 100px;
+              margin-left: 20px;
+            }
+          }
         }
       }
     }
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1400px) {
+  body {
+    header {
+      .header-content {
+        .search {
+          input {
+            width: 450px;
+          }
+        }
+      }
+    }
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
+  body {
+    header {
+      .header-content {
+        .search {
+          input {
+            width: 500px;
+          }
+        }
+      }
+    }
+  }
 }
