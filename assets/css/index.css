@@ -732,5 +732,32 @@ footer .copyright {
     display: flex;
   }
 }
+.container-login {
+  width: 420px;
+  height: 40vh;
+  display: flex;
+}
+.container-login .form-login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-login .form-login label {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.container-login .form-login label input {
+  width: 100%;
+}
+.container-login .form-login p {
+  margin: 0;
+}
+.container-login .form-login p a {
+  color: #222;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=index.css.map */
